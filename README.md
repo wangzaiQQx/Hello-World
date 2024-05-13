@@ -11,6 +11,8 @@ git add . #添加文件
 git add xx # 添加单个文件
 git commit -m "xx" # 提交
 git commit -am "xx" # 提交
-git merge xx # 合并分支
+git merge --no-ff xx # 合并分支
+git reflog # 查看提交记录
+git rebase -i head~3 # 合并多个提交
 git push #推送 
 ```
