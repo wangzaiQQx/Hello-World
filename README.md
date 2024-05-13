@@ -14,4 +14,3 @@ git commit -m "xx" # 提交
 git merge xx # 合并分支
 git push #推送 
 ```
-翻译：git的基本操作
