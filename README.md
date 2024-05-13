@@ -1,5 +1,4 @@
 # Git教程
-代码块
 ```powershell
 git init # 初始化
 git status # 查看状态
