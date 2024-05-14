@@ -11,5 +11,5 @@ with open('test.txt', 'r', encoding='utf-8') as f:
     for pattern in delete_list:
         content = re.sub(pattern, "", content)
     content = re.sub("\n\n+", "\n\n", content)
-with open('text.txt', 'w', encoding='utf-8') as f:
+with open('test.txt', 'w', encoding='utf-8') as f:
     f.write(content)
