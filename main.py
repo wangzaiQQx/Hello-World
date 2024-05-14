@@ -79,7 +79,6 @@ class NovelScraper:
 if __name__ == "__main__":
     url = input("请输入小说链接：")
     more_delete = [
-        "请收藏本站：https://www.bqguu.cc。笔趣阁手机版：https://m.bqguu.cc"
     ]  # 用户自定义需要额外删除的内容列表
     scraper = NovelScraper(url, more_delete)
     scraper.scrape_novel()
