@@ -69,6 +69,7 @@ class NovelScraper:
 
 if __name__ == "__main__":
     url = input("请输入小说链接：")
-    more_delete = []
+    more_delete = [
+    ]
     scraper = NovelScraper(url, more_delete)
     scraper.scrape_novel()
