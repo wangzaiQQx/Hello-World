@@ -16,3 +16,5 @@ git reflog # 查看提交记录
 git rebase -i head~3 # 合并多个提交
 git push #推送 
 ```
+# github ping 配置
+20.205.243.166
