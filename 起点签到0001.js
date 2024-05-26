@@ -11,8 +11,15 @@ if (auto.service == null) {
     device.setMusicVolume(0)
     home()
     sleep(1000);
-    launch("com.qidian.QDReader");
-    waitForPackage("com.qidian.QDReader");
+    try{
+        if (textContains("0001").exists()) {
+            click("0001", 0)
+        }
+        log("尝试开启起点读书");
+    }
+    catch(e){
+        log("开启失败")
+    }
     do {
         sleep(1000);
         if (text("书架").exists() && text("精选").exists() && text("发现").exists() && text("我").exists()) {
@@ -41,14 +48,16 @@ if (auto.service == null) {
         swipe(device.width - 50, device.height / 4, device.width - 50, device.height / 2, 500)
         sleep(3000);
         //方案一
-        let uc = id("viewPager").className("androidx.viewpager.widget.ViewPager").scrollable(true).findOne().bounds()
-        var x1 = uc.right;
-        var y1 = uc.bottom;
-        click((x1 - 10), (y1 + 10))
+        // let uc = id("viewPager").className("androidx.viewpager.widget.ViewPager").scrollable(true).findOne().bounds()
+        // var x1 = uc.right;
+        // var y1 = uc.bottom;
+        // click((x1 - 10), (y1 + 10))
         //方案二
         // click(device.width - 150, device.height - 150)
         //方案三
         // id("view_tab_title_title").className("android.widget.TextView").text("我").findOne().parent().click()
+        //方案四
+        click(643, 1555)
         sleep(3000);
         try{
             if (textContains("我知道了").exists()) {
@@ -470,8 +479,8 @@ if (auto.service == null) {
             }
             log("———————");
             sleep(1000);
-            var mokuai_jilisuipian = require('激励碎片.js');
-            mokuai_jilisuipian.step()
+            // var mokuai_jilisuipian = require('激励碎片.js');
+            // mokuai_jilisuipian.step()
             log("脚本已结束，记得清理auto.js后台");
             log("控制台3秒后自动关闭");
             sleep(3000);
