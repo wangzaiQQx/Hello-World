@@ -49,6 +49,8 @@ if (auto.service == null) {
         // click(device.width - 150, device.height - 150)
         //方案三
         // id("view_tab_title_title").className("android.widget.TextView").text("我").findOne().parent().click()
+        // 方案四
+        // click(643, 1555)
         sleep(3000);
         try{
             if (textContains("我知道了").exists()) {
@@ -58,7 +60,8 @@ if (auto.service == null) {
         }
         catch(e){
             log("关闭失败")
-        }
+        };
+        sleep(3000);
         if (text("福利中心").exists()) {
             log("成功打开“我”");
             thread.interrupt()
